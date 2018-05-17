@@ -1,0 +1,36 @@
+<!--pages/index/index.wxml-->
+<scroll-view class='container'>
+    <picker class='sectionPicker' bindchange='bindPickerChange' value='{{index}}' range='{{sectionArray}}'>
+        <view>{{sectionArray[sectionIndex]}}</view>
+        <image src='../../static/images/more_unfold.png'></image>
+    </picker>
+    <input class='searchInput' type='text' placeholder='自行车' placeholder-class='searchInputPlaceholder'></input>
+    <swiper class='banner' indicator-dots='true' autoplay='true' duration='500'>
+        <block wx:for="{{bannerImageUrl}}">
+            <swiper-item>
+                <image src='{{item}}'></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class='nav'>
+        <navigator wx:for="{{navList}}" class='navList' url='{{item.url}}'>
+            <image src='{{item.icon}}'></image>
+            <text>{{item.text}}</text>
+        </navigator>
+    </view>
+    <view class='forum'>
+        <view wx:for="{{forumList}}" class='forumList'>
+            <image class='useravatar' src='{{item.imageUrl}}'></image>
+            <text class='money'>￥{{item.money}}</text>
+            <text>{{item.userName}}</text>
+            <text class='time'>{{item.time}}</text>
+            <view class='mes'>{{item.mes}}</view>
+            <view class='goodImage'>
+                <image wx:for="{{item.image}}" src='{{item}}'></image>
+            </view>
+        </view>
+    </view>
+    <view class='publish' bindtap='bindPublish'>
+        <image src='../../static/images/plus.png'></image>
+    </view>
+</scroll-view>

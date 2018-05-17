@@ -1,0 +1,134 @@
+/* pages/index/index.wxss */
+view, scroll-view {
+  box-sizing: border-box;
+}
+.container {
+  padding-top: 10rpx;
+  background:rgba(248,248,248,1);
+  position: relative;
+}
+
+.sectionPicker {
+  position: relative;
+  width: 54px;
+  height: 64rpx;
+  line-height: 64rpx;
+  float: left;
+  font-size: 28rpx;
+  margin-left: 30rpx;
+}
+.sectionPicker image {
+  position: absolute;
+  top: 16rpx;
+  left: 56rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.searchInput {
+  height: 64rpx;
+  width: 549rpx;
+  float: right;
+  margin-right: 36rpx;
+  margin-bottom: 27rpx;
+  background:rgba(232,232,232,1);
+  border-radius: 16px;
+}
+.searchInputPlaceholder {
+  text-align: center;
+  color: #aaa;
+  font-size: 30rpx;
+}
+
+.banner {
+  margin-bottom: 73rpx;
+  margin-left: 30rpx;
+  border-radius: 26rpx;
+  width: 690rpx;
+  height: 307rpx;
+  overflow: hidden;
+}
+.banner image {
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  margin-left: 30rpx;
+  width: 690rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.navList {
+  width: 127rpx;
+  height: 130rpx;
+  text-align: center;
+}
+.navList image {
+  width: 97rpx;
+  height: 97rpx;
+}
+.navList text {
+  display: block;
+  font-size: 26rpx;
+}
+
+.forum {
+  margin-top: 69rpx;
+  width: 100%;
+}
+.forumList {
+  width: 100%;
+  height: 502rpx;
+  margin-top: 10rpx;
+  padding: 28rpx 30rpx;
+  background-color: white;
+}
+.useravatar {
+  float: left;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 18rpx;
+}
+.money {
+  float: right;
+  color: #E10C0D;
+  font-size: 42rpx;
+}
+.userName {
+  font-size: 32rpx;
+}
+.time {
+  display: block;
+  font-size: 24rpx;
+  color: #aaa;
+}
+.mes {
+  margin-top: 31rpx;
+  margin-bottom: 19rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.goodImage {
+  display: flex;
+  justify-content: space-around;
+}
+.goodImage image {
+  width: 221rpx;
+  height: 190rpx;
+  border-radius: 8rpx;
+}
+
+
+.publish {
+  width: 112rpx;
+  height: 112rpx;
+  bottom: 66rpx;
+  right: 31rpx;
+  position: fixed;
+}
+.publish image {
+  width: 112rpx;
+  height: 112rpx;
+}

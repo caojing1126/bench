@@ -1,0 +1,81 @@
+/* pages/topic/topic.wxss */
+view {
+  box-sizing: border-box;
+}
+
+
+page {
+  background:rgba(250,247,247,1);
+}
+.container {
+  background:rgba(250,247,247,1);
+  width: 100%;
+}
+
+
+.profile-info{
+  position: relative;
+  width: 100%;
+  height: 384rpx;
+  padding: 88rpx 0 0 53rpx;
+  background:rgba(253,249,221,1);
+  box-shadow:1px 0px 4px rgba(43,43,43,0.15);
+}
+.profile-info .avatar{
+    height: 140rpx;
+    width: 140rpx;
+    border-radius: 50%;
+}
+.profile-info .name{
+    color: #777;
+    font-size: 28rpx;
+    position: absolute;
+    top: 143rpx;
+    margin-left: 28rpx;
+}
+.sign {
+  position: relative;
+  width: 184rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  background-color: #FCDE00;
+  border-top-left-radius:31rpx;
+  border-bottom-left-radius:31rpx;
+  margin-top: 39rpx;
+  float: right;
+}
+.sign image {
+  position: absolute;
+  margin-top: 13rpx;
+  margin-left: 16rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.sign text {
+  margin-left: 66rpx;
+  color: white;
+}
+
+
+.menu {
+  width: 100%;
+  padding: 58rpx 0 0 30rpx;
+}
+.menuList {
+  width: 210rpx;
+  height: 210rpx;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+  display: inline-block;
+  text-align: center;
+}
+.menuList image {
+  margin-top: 39rpx;
+  margin-bottom: 13rpx;
+  width: 86rpx;
+  height: 100rpx;
+}
+.menuList text {
+  font-size: 28rpx;
+  display: block;
+}

@@ -1,0 +1,17 @@
+<!--pages/topic/topic.wxml-->
+<view class='container'>
+    <view class="profile-info">
+        <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+        <text class="name">{{userInfo.nickName}}</text>
+        <view class='sign'>
+            <image></image>
+            <text>去签到</text>
+        </view>
+    </view>
+    <view class='menu'>
+        <navigator wx:for="{{menuList}}" class='menuList' style='background-color:{{item.color}}'>
+            <image src='../../static/images/home.png'></image>
+            <text>{{item.text}}</text>
+        </navigator>
+    </view>
+</view>

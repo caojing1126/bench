@@ -1,0 +1,18 @@
+<!--pages/ucenter/index/index.wxml-->
+<view class='container'>
+    <button open-type='getUserInfo' class="profile-info" hover-class='none'>
+        <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+        <view class="info">
+            <text class="name">{{userInfo.nickName}}</text>
+            <text class="level">{{userInfo.userName}}</text>
+        </view>
+        <image class='avatar_bl' src='{{userInfo.avatarUrl}}'></image>
+    </button>
+    <view class='nav'>
+      <navigator wx:for="{{navList}}" class='navList' url='{{item.url}}'>
+          <image src='{{item.icon}}' class='navIcon'></image>
+          <text>{{item.text}}</text>
+          <image src='../../../static/images/more.png' class='moreIcon'></image>
+      </navigator>
+    </view>
+</view>
