@@ -1,39 +1,10 @@
-// pages/index/index.js
+// pages/tspl/tspl.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    sectionArray:["镇江"],
-    sectionIndex: 0,
-    bannerImageUrl:[
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-    ],
-    navList:[
-      {
-        url: "../tspl/tspl",
-        icon: "../../static/images/home.png",
-        text: "图书漂流"
-      },
-      {
-        url: "",
-        icon: "../../static/images/home.png",
-        text: "房屋租凭"
-      },
-      {
-        url: "",
-        icon: "../../static/images/home.png",
-        text: "西服租凭"
-      },
-      {
-        url: "",
-        icon: "../../static/images/home.png",
-        text: "签到"
-      }
-    ],
     forumList: [
       {
         imageUrl: "http://yanxuan.nosdn.127.net/8945ae63d940cc42406c3f67019c5cb6.png",

@@ -2,7 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/topic/topic",
-    "pages/ucenter/index/index"
+    "pages/ucenter/index/index",
+    "pages/tspl/tspl",
+    "pages/ucenter/collection/collection",
+    "pages/ucenter/publication/publication",
+    "pages/ucenter/reservation/reservation",
+    "pages/ucenter/about/about",
+    "pages/ucenter/officialAccount/officialAccount"
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -13,23 +13,23 @@ Page({
     userInfo: "",
     navList: [
       {
-        url: "",
+        url: "../publication/publication",
         icon: "",
         text: "我的发布"
       }, {
-        url: "",
+        url: "../collection/collection",
         icon: "",
         text: "我的收藏"
       }, {
-        url: "",
+        url: "../reservation/reservation",
         icon: "",
         text: "我的预约"
       }, {
-        url: "",
+        url: "../officialAccount/officialAccount",
         icon: "",
         text: "关注公众号"
       }, {
-        url: "",
+        url: "../about/about",
         icon: "",
         text: "关于"
       },
