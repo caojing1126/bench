@@ -1,0 +1,20 @@
+<!--pages/tspl/tspl.wxml-->
+<view class='container'>
+    <view class='title'>
+        <text>图书管理</text>
+        <input type='text' placeholder='西游记' placeholder-class='inputPlaceholder'></input>
+        <image src='../../static/images/plus.png'></image>
+    </view>
+    <view class='forum'>
+        <view wx:for="{{forumList}}" class='forumList'>
+            <image class='useravatar' src='{{item.imageUrl}}'></image>
+            <text class='money'>￥{{item.money}}</text>
+            <text>{{item.userName}}</text>
+            <text class='time'>{{item.time}}</text>
+            <view class='mes'>{{item.mes}}</view>
+            <view class='goodImage'>
+                <image wx:for="{{item.image}}" src='{{item}}'></image>
+            </view>
+        </view>
+    </view>
+</view>

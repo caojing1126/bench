@@ -1,5 +1,5 @@
 // var NewApiRootUrl = 'http://localhost:8080/platform-framework/api/';
-var NewApiRootUrl = 'http://47.98.191.33:8080/platform-admin-1.0.0/api/';
+var NewApiRootUrl = 'https://47.98.191.33/platform-admin-1.0.0/api/';
 
 module.exports = {
     IndexUrl: NewApiRootUrl + 'index/index', //首页数据接口
