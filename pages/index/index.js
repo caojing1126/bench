@@ -19,24 +19,24 @@ Page({
     ],
     navList:[
       {
-        url: "../tspl/tspl",
-        icon: "../../static/images/home.png",
-        text: "图书漂流"
+        url: "../tspl/tspl?id=1",
+        icon: "../../static/images/社会事务.png",
+        name: "图书漂流"
+      },
+      {
+        url: "../tspl/tspl?id=2",
+        icon: "../../static/images/酒店预订.png",
+        name: "房屋租凭"
+      },
+      {
+        url: "../tspl/tspl?id=3",
+        icon: "../../static/images/管家.png",
+        name: "西服租凭"
       },
       {
         url: "",
-        icon: "../../static/images/home.png",
-        text: "房屋租凭"
-      },
-      {
-        url: "",
-        icon: "../../static/images/home.png",
-        text: "西服租凭"
-      },
-      {
-        url: "",
-        icon: "../../static/images/home.png",
-        text: "签到"
+        icon: "../../static/images/问卷.png",
+        name: "签到"
       }
     ],
     forumList: [
@@ -69,13 +69,30 @@ Page({
         })
       }
     })
+    wx.request({
+      url: api.GoodsList,
+      success: (res) => {
+        console.log(res)
+      }
+    })
   },
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 搜索框点击跳转
    */
-  onReady: function () {
-  
+  bindSearchInput: function () {
+    wx.navigateTo({
+      url: '../search/search',
+    })
+  },
+
+  /**
+   * "+"icon点击跳转
+   */
+  bindPublish: function () {
+    wx.navigateTo({
+      url: '../publication/publication',
+    })
   },
 
   /**

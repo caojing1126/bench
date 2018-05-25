@@ -1,0 +1,40 @@
+/* pages/search/search.wxss */
+.view ,scroll-view, input {
+  box-sizing: border-box;
+}
+
+page {
+  background:rgba(248,248,248,1);
+}
+.container {
+  padding-top: 23rpx;
+  background:rgba(248,248,248,1);
+}
+
+.search {
+  position: relative;
+  padding: 0 30rpx;
+  height: 64rpx;
+  width: 100%;
+}
+.search input {
+  float: left;
+  height: 64rpx;
+  width: 600rpx;
+  background:rgba(232,232,232,1);
+  border-radius: 16px;
+  padding-left:50rpx; 
+}
+.search image {
+  z-index: 99;
+  position: absolute;
+  top: 14rpx;
+  left: 40rpx;
+  height: 32rpx;
+  width: 32rpx;
+}
+.search text {
+  position: absolute;
+  top: 12rpx;
+  right: 30rpx;
+}

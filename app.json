@@ -8,7 +8,9 @@
     "pages/ucenter/publication/publication",
     "pages/ucenter/reservation/reservation",
     "pages/ucenter/about/about",
-    "pages/ucenter/officialAccount/officialAccount"
+    "pages/ucenter/officialAccount/officialAccount",
+    "pages/search/search",
+    "pages/publication/publication"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -20,25 +22,25 @@
   "tabBar": {
     "backgroundColor": "#fafafa",
     "borderStyle": "white",
-    "selectedColor": "#b4282d",
+    "selectedColor": "#f9b83a",
     "color": "#666",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "static/images/ic_menu_choice_nor.png",
-        "selectedIconPath": "static/images/ic_menu_choice_pressed.png",
+        "iconPath": "static/images/脚印.png",
+        "selectedIconPath": "static/images/脚印_y.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/topic/topic",
-        "iconPath": "static/images/ic_menu_topic_nor.png",
-        "selectedIconPath": "static/images/ic_menu_topic_pressed.png",
+        "iconPath": "static/images/宇宙星球.png",
+        "selectedIconPath": "static/images/宇宙星球_y.png",
         "text": "发现"
       },
       {
         "pagePath": "pages/ucenter/index/index",
-        "iconPath": "static/images/ic_menu_me_nor.png",
-        "selectedIconPath": "static/images/ic_menu_me_pressed.png",
+        "iconPath": "static/images/我的.png",
+        "selectedIconPath": "static/images/我的_y.png",
         "text": "我的"
       }
     ]
