@@ -18,14 +18,23 @@ Page({
           'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
         ]
       }
-    ]
+    ],
+    section: {
+      name: "",
+      input: ""
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    if (options.id == "1") { this.data.section.name = "图书漂流"; this.data.section.input = "西游记"; }
+    if (options.id == "2") { this.data.section.name = "房屋租赁"; this.data.section.input = "上林苑"; }
+    if (options.id == "3") { this.data.section.name = "西服租赁"; this.data.section.input = "西装"; }
+    this.setData({
+      section: this.data.section
+    })
   },
 
   /**
@@ -40,6 +49,15 @@ Page({
    */
   onShow: function () {
   
+  },
+
+  /**
+   * 搜索框点击跳转
+   */
+  bindSearchInput: function () {
+    wx.navigateTo({
+      url: '../search/search',
+    })
   },
 
   /**

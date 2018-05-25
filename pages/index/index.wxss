@@ -2,6 +2,10 @@
 view, scroll-view {
   box-sizing: border-box;
 }
+button::after {
+  border: none
+}
+
 .container {
   padding-top: 10rpx;
   background:rgba(248,248,248,1);
@@ -33,11 +37,20 @@ view, scroll-view {
   margin-bottom: 27rpx;
   background:rgba(232,232,232,1);
   border-radius: 16px;
+  position: relative;
+  text-align: center
 }
-.searchInputPlaceholder {
-  text-align: center;
-  color: #aaa;
-  font-size: 30rpx;
+.searchInput image {
+  position: absolute;
+  top: 17rpx;
+  left: 189rpx;
+  height: 33rpx;
+  width: 33rpx;
+}
+.searchInput text {
+  position: absolute;
+  left: 235rpx;
+  color:rgba(170,170,170,1);
 }
 
 .banner {

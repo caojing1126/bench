@@ -1,32 +1,45 @@
 /* pages/tspl/tspl.wxss */
-view {
+view, scroll-view {
   box-sizing: border-box;
 }
+button::after {
+  border: none
+}
+
 page {
   background:rgba(248,248,248,1);
 }
-
 
 .title {
   padding-top: 48rpx;
   padding-left: 28rpx;
 }
-.title text{
+.title .name{
   font-size: 52rpx;
 }
-.title input {
+.title button {
   margin-top: 42rpx;
+  margin-left: 0;
   width: 579rpx;
   height: 64rpx;
   border-radius: 16rpx;
   background:rgba(232,232,232,1);
+  position: relative;
 }
-.inputPlaceholder {
-  text-align: center;
+.title button image {
+  position: absolute;
+  top: 17rpx;
+  left: 219rpx;
+  height: 33rpx;
+  width: 33rpx;
+}
+.title button text {
+  position: absolute;
+  left: 262rpx;
+  color:rgba(170,170,170,1);
 }
 .title image {
   position: absolute;
-  border: 1rpx solid #000;
   top: 150rpx;
   right: 44rpx;
   height: 80rpx;

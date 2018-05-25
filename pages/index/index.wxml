@@ -4,7 +4,10 @@
         <view>{{sectionArray[sectionIndex]}}</view>
         <image src='../../static/images/more_unfold.png'></image>
     </picker>
-    <input class='searchInput' type='text' placeholder='自行车' placeholder-class='searchInputPlaceholder'></input>
+    <button class='searchInput' bindtap='bindSearchInput'>
+        <image src='../../static/images/放大镜.png'></image>
+        <text>自行车</text>
+    </button>
     <swiper class='banner' indicator-dots='true' autoplay='true' duration='500'>
         <block wx:for="{{banner}}">
             <swiper-item>
@@ -13,8 +16,8 @@
         </block>
     </swiper>
     <view class='nav'>
-        <navigator wx:for="{{channel}}" class='navList' url='{{item.url}}'>
-            <image src='{{item.icon_url}}'></image>
+        <navigator wx:for="{{navList}}" class='navList' url='{{item.url}}'>
+            <image src='{{item.icon}}'></image>
             <text>{{item.name}}</text>
         </navigator>
     </view>

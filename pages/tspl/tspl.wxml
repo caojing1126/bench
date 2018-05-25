@@ -1,8 +1,11 @@
 <!--pages/tspl/tspl.wxml-->
 <view class='container'>
     <view class='title'>
-        <text>图书管理</text>
-        <input type='text' placeholder='西游记' placeholder-class='inputPlaceholder'></input>
+        <text class='name'>{{section.name}}</text>
+        <button class='searchInput' bindtap='bindSearchInput'>
+            <image src='../../static/images/放大镜.png'></image>
+            <text>{{section.input}}</text>
+        </button>
         <image src='../../static/images/plus.png'></image>
     </view>
     <view class='forum'>

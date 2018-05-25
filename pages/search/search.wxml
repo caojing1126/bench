@@ -1,0 +1,8 @@
+<!--pages/search/search.wxml-->
+<scroll-view class='container'>
+    <view class='search'>
+        <image src='../../static/images/放大镜.png'></image>
+        <input type='text' focus='true'></input>
+        <text>取消</text>
+    </view>
+</scroll-view>

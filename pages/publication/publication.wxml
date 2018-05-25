@@ -1,0 +1,36 @@
+<!--pages/publication/publication.wxml-->
+<view class='contain'>
+    <form bindsubmit='bindSubmit'>
+        <textarea placeholder='请输入商品描述' name="descript"></textarea>
+        <view class='text'>
+            <label class='lable'>分类：</label>
+            <picker bindChange='bindPickerKind' value='{{kindIndex}}' range='{{kind}}' name="kind">{{kind[kindIndex]}}</picker>
+        </view>
+        <view class='text'>
+            <label class='lable'>成色：</label>
+            <picker bindChange='bindPickerDegree' value='{{degreeIndex}}' range='{{degree}}' name="degree">{{degree[degreeIndex]}}</picker>
+        </view>
+        <view class='text'>
+            <label class='lable'>价格：</label>
+            <input type='text' name="price"></input>
+        </view>
+        <view class='text'>
+            <label class='lable'>学校：</label>
+            <picker bindChange='bindPickerCampus' value='{{campusIndex}}' range='{{campus}}' name="campus">{{campus[campusIndex]}}</picker>
+        </view>
+        <view class='text'>
+            <label class='lable'>联系电话：</label>
+            <input type='text' name="tel"></input>
+        </view>
+        <view class='image'>
+            <view bindtap='bindUploadImg'>
+                <image src='../../static/images/plus.png'></image>
+                <text>上传图片</text>
+            </view>
+            <image wx:for="{{uploadImgSrc}}" mode='aspectFit' src='{{item}}' wx:if="{{item}}" bindtap='bindDeleteImg' data-index='{{index}}'></image>
+        </view>
+        <view>
+            <button form-type='submit'>提交</button>
+        </view>
+    </form>
+</view>
