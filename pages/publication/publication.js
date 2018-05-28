@@ -1,15 +1,27 @@
 // pages/publication/publication.js
+var util = require('../../utils/util.js');
+var api = require('../../config/api.js');
+var user = require('../../services/user.js');
+var app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    kind: ["1", "2"],
+    kind: [
+      { id: "1005008", name: "图书漂流" },
+      { id: "1005010", name: "生活用品" },
+      { id: "1005009", name: "图书转租" },
+      { id: "1005001", name: "体育用材" },
+      { id: "1005002", name: "电子数码" },
+      { id: "1005012", name: "其他" },
+    ],
     kindIndex: 0,
     degree: ["九成新", "八成新"],
     degreeIndex: 0,
-    campus: ["江苏科技大学", "江苏大学"],
+    campus: ["镇江", "江苏大学", "江苏科技大学"],
     campusIndex: 0,
     uploadImgSrc: []
   },
@@ -136,23 +148,29 @@ Page({
       }, 2000)
     }else {
       var file = e.detail.value;
-      file.img = that.data.uploadImgSrc
-      wx.uploadFile({
-        url: '',
-        filePath: file,
-        name: 'GoodsPublichation',
-        formData: {
-          /*
-          kind: that.data.kind[kindIndex],
-          degree: that.data.degree[degreeIndex],
-          price: e.detail.value.price,
-          campus: that.data.campus[campusIndex],
-          tel: e.detail.value.tel
-          */
-        }
-      })
+      file.img = that.data.uploadImgSrc;
+      let imgSrc = new Array();
+      util.wxUploadFile('http://47.98.191.33/platform-admin-1.0.0/api/upload/upload', that.data.uploadImgSrc, 'file', imgSrc, that.data.uploadImgSrc.length - 1,api.saveUrl,
+        {
+          "goods_brief": e.detail.value.descript,
+          "category_id": that.data.kind[that.data.kindIndex].id,
+          "goods_desc": that.data.degreeIndex,
+          "retail_price": file.price,
+          "goods_unit": that.data.campusIndex + 1,
+          "mobile": file.tel,
+          "is_delete": 1,
+          "create_user_id": 1,
+          "list_pic_url":  imgSrc.toString()
+        },
+        "post",
+        res => {
+          console.log(res)
+        },
+        err => {
+
+        },
+      )
     }
-    
   },
 
   /**

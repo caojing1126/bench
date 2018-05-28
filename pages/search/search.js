@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    searchValue: "",
+    forumList: []
   },
 
   /**
@@ -13,6 +14,17 @@ Page({
    */
   onLoad: function (options) {
   
+  },
+
+  bindSubmit: function (e) {
+    let that =this;
+    console.log(e.detail.value)
+    wx.request({
+      url: "https://xcxy.xuechuang.online/platform-admin-1.0.0/api/goods/list?name="+that.data.searchValue,
+      success: res => {
+        console.log(res)
+      }
+    })
   },
 
   /**

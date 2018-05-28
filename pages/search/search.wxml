@@ -2,7 +2,19 @@
 <scroll-view class='container'>
     <view class='search'>
         <image src='../../static/images/放大镜.png'></image>
-        <input type='text' focus='true'></input>
-        <text>取消</text>
+        <input bindtap='bindSubmit' type='text' focus='true' value='{{searchValue}}' confirm-type='search'></input>
+        <text bindtap='bindSubmit'>提交</text>
+    </view>
+    <view class='forum'>
+        <view wx:for="{{forumList}}" class='forumList'>
+            <image class='useravatar' src='{{item.imageUrl}}'></image>
+            <text class='money'>￥{{item.money}}</text>
+            <text>{{item.userName}}</text>
+            <text class='time'>{{item.time}}</text>
+            <view class='mes'>{{item.mes}}</view>
+            <view class='goodImage'>
+                <image wx:for="{{item.image}}" src='{{item}}'></image>
+            </view>
+        </view>
     </view>
 </scroll-view>
