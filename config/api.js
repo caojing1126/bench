@@ -1,7 +1,10 @@
 // var NewApiRootUrl = 'http://localhost:8080/platform-framework/api/';
-var NewApiRootUrl = 'https://47.98.191.33/platform-admin-1.0.0/api/';
+var NewApiRootUrl = 'https://xcxy.xuechuang.online/platform-admin-1.0.0/api/';
 
 module.exports = {
+    loginUrl: NewApiRootUrl + "auth/login_by_weixin",
+    saveUrl: NewApiRootUrl + "goods/save",
+
     IndexUrl: NewApiRootUrl + 'index/index', //首页数据接口
     CatalogList: NewApiRootUrl + 'catalog/index',  //分类目录全部分类数据接口
     CatalogCurrent: NewApiRootUrl + 'catalog/current',  //分类目录当前分类数据接口

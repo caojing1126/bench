@@ -29,45 +29,9 @@ function request(url, data = {}, method = "GET") {
       method: method,
       header: {
         'Content-Type': 'application/json',
-        'X-Nideshop-Token': wx.getStorageSync('token')
       },
       success: function (res) {
-        console.log("success");
-
-        if (res.statusCode == 200) {
-
-          if (res.data.errno == 401) {
-            //需要登录后才可以操作
-
-            let code = null;
-            return login().then((res) => {
-              code = res.code;
-              return getUserInfo();
-            }).then((userInfo) => {
-              //登录远程服务器
-              request(api.AuthLoginByWeixin, { code: code, userInfo: userInfo }, 'POST').then(res => {
-                if (res.errno === 0) {
-                  //存储用户信息
-                  wx.setStorageSync('userInfo', res.data.userInfo);
-                  wx.setStorageSync('token', res.data.token);
-                  
-                  resolve(res);
-                } else {
-                  reject(res);
-                }
-              }).catch((err) => {
-                reject(err);
-              });
-            }).catch((err) => {
-              reject(err);
-            })
-          } else {
-            resolve(res.data);
-          }
-        } else {
-          reject(res.errMsg);
-        }
-
+        resolve(res)
       },
       fail: function (err) {
         reject(err)
@@ -150,6 +114,51 @@ function showErrorToast(msg) {
   })
 }
 
+function wxUploadFile (url,filePath,name,imgSrc,i,rUrl,data,method,success,fail) {
+  if(i >= 0) {
+      wx.uploadFile({
+        url: url,
+        filePath: filePath[i],
+        name: name,
+        success: res => {
+          imgSrc.push(JSON.parse(res.data).data);
+          console.log(imgSrc.toString())
+          wxUploadFile(url, filePath, name, imgSrc, i - 1, rUrl, data, method, success,fail);
+        },
+        fail: err => {
+          console.log(err)
+        }
+      })
+  } else {
+    data.list_pic_url = imgSrc.toString()
+    console.log(data)
+    wx.request({
+      url: rUrl,
+      data: data,
+      method: method,
+      success: success,
+      fail: fail
+    })
+  }
+}
+
+function imgUploadFile (url,filePath,name,imgSrc,i) {
+  return new Promise(function(resolve,reject) {
+    wxUploadFile(url, filePath, name, imgSrc, i);
+    wx.uploadFile({
+      url: url,
+      filePath: filePath[0],
+      name: name,
+      success: res => {
+        resolve(res);
+      },
+      fail: err => {
+        reject(err)
+      }
+    });
+  })
+}
+
 module.exports = {
   formatTime,
   request,
@@ -158,6 +167,8 @@ module.exports = {
   checkSession,
   login,
   getUserInfo,
+  imgUploadFile,
+  wxUploadFile,
 }
 
 

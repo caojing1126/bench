@@ -19,7 +19,7 @@ Page({
     ],
     navList:[
       {
-        url: "../tspl/tspl?id=1",
+        url: "../tspl/tspl?id=1005008",
         icon: "../../static/images/社会事务.png",
         name: "图书漂流"
       },

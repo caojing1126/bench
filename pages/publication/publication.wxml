@@ -4,7 +4,7 @@
         <textarea placeholder='请输入商品描述' name="descript"></textarea>
         <view class='text'>
             <label class='lable'>分类：</label>
-            <picker bindChange='bindPickerKind' value='{{kindIndex}}' range='{{kind}}' name="kind">{{kind[kindIndex]}}</picker>
+            <picker bindChange='bindPickerKind' value='{{kindIndex}}' range='{{kind}}' name="kind">{{kind[kindIndex].name}}</picker>
         </view>
         <view class='text'>
             <label class='lable'>成色：</label>
